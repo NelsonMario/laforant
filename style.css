@@ -954,8 +954,9 @@ footer{
     
     @keyframes typewriter{
         from{width: 0;}
-        to{width: 7em;}
+        to{width: 10.4em;}
     }
+
     @keyframes blinkTextCursor{
     from{border-right-color: rgba(255,255,255,.75);}
     to{border-right-color: transparent;}
@@ -1124,4 +1125,6 @@ footer{
     .typewriter{
         display: none;
     }
+    
+    
 }
