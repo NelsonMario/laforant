@@ -7,6 +7,19 @@
             font-style:normal;
         }
 
+@font-face {font-family:"Muli";
+    src: url("asset//Muli//Muli-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family: "DINNext";
+    src: url("asset/DINNext/654-font.otf") format("opentype");
+    font-weight:normal;
+    font-style:normal;
+}
+
 :root{
     font-size: 16px;
     font-family: 'Open Sans';
@@ -25,6 +38,7 @@ body{
     padding: 0;
     color: black;
     background-color: white;
+    font-family: 'DINNext';
 }
 
 body::-webkit-scrollbar{
@@ -47,6 +61,7 @@ section{
     width: 5rem;
     height: 100vh;
     position: fixed;
+    z-index: 6;
     background-color: var(--bg-primary);
     transition: 200ms ease;
 }
@@ -199,7 +214,10 @@ video{
     background-color: var(--main-red-color);
 }
 
+
 .parallax {
+    display: flex;
+    align-items: center;
     /* The image used */
     background-image: url('asset//jett.gif');
     /* Full height */
@@ -221,18 +239,415 @@ video{
     padding-left: 5vw;
 }
 
-.parallax1 {
+.content{
+    position: relative;
+    overflow: auto;
+    height: 80vh;
+    display: flex;
+
+    justify-content: flex-end;
+    background: url('asset/building_2.png') no-repeat;
+    font-size:36px
+}
+
+.content::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 70px 30px 0;
+    border-color: transparent rgba(235, 232, 225) transparent transparent;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+.content > .sub-content{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background: rgb(15, 25, 35, 1);
+    overflow: hidden;
+}
+
+.sub-content > .left{
+    display: flex;
+    border-left: solid 1px gray;
+    flex-direction: column;
+    justify-content: center;
+    width: 89.9%;
+
+}
+.sub-content > .left > .title, .sub-content > .left > .description, .sub-content > .left > .footer{
+    display: flex;
+    padding: 0 5vw;
+}
+.sub-content > .left > .title{
+    font-size: 2vw;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+
+.sub-content > .left > .description, .sub-content > .left > .footer{
+    font-size: 1.5vw;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.video-thumbnail > img{
+    width: 60vw;
+    height: 50vh;
+}
+
+/*content - 2*/
+.content-2{
+    position: relative;
+    overflow: auto;
+    height: 40vw;
+    display: flex;
+    justify-content: flex-end;
+    /* background: url('asset/building_2.png') no-repeat; */
+    font-size:36px;
+    overflow: visible;
+}
+
+
+.content-2::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 70px 29px 40px;
+    border-color: transparent rgb(15, 25, 35, 1) transparent transparent;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.content-2 > .sub-content-2{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background: var(--main-red-color);
+    overflow: visible;
+}
+
+.sub-content-2 > .left{
+    display: flex;
+    overflow: visible;
+    border-left: solid 1px gray;
+    flex-direction: column;
+    justify-content: center;
+    width: 89.9%;
+}
+
+.sub-content-2 > .left > img{
+    width: 30vw;
+    z-index: 1;
+}
+
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.agent-description > .title, .agent-description > .description{
+    padding-bottom: 5vh;
+}
+
+.agent-description > .title{
+    border-top: solid 1px gray;
+    padding-top: 50px;
+    font-size: 5vw;
+    font-family: 'Valorant';
+}
+
+.agent-description > .description{
+    font-size: 1.8vw;
+    font-weight: bold;
+}
+
+.agent-description > .footer{
+    font-size: 1.5vw;
+}
+
+.content-3{
+    position: relative;
+    overflow: auto;
+    height: 36.2vw;
+    padding-bottom: 10px;
+    display: flex;
+    overflow: visible;
+    justify-content: flex-start;
+    font-size:36px
+}
+
+.content-3 > .sub-content-3{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background: rgb(236, 231, 225, 1);
+    overflow: visible;
+}
+
+
+.sub-content-3 > .left{
+    display: flex;
+    border-left: solid 1px gray;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+
+.sub-content-3 > .left > .title{
+    position: relative;
+    border-top: solid 1px gray;
+    padding-top: 75px;
+    font-size: 4.5vw;
+    font-family: 'Valorant';
+}
+
+.sub-content-3 > .left > .description, .sub-content-3 > .left > .footer{
+    font-size: 1.5vw;
+    padding: 25px 0;
+    color: black;
+    display: flex;
+}
+
+.sub-content-3 > .right{
+    transform: translateY(-5vw);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.building-thumbnail{
+    position: relative;
+}
+
+.building-thumbnail > img{
+    display: block; 
+    position: relative;
+    z-index: 1;
+    width: 60vw;
+}
+
+.building-thumbnail .fade { 
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    height: 200px;
+    z-index: 2; 
+    background: 
+        rgb(236, 231, 225, 0)
+        linear-gradient(to bottom, 
+        rgb(236, 231, 225, 0) 0%, 
+        rgb(236, 231, 225, 1) 90%) repeat scroll 0 0;  
+    }
+
+
+.parallax_2 {
+    display: flex;
+    align-items: center;
     /* The image used */
-    background-image: url('https://placekitten.com/g/900/700');
+    background-image: url('asset/valorants-new-agent-revealed-in-launch-artwork.jpg');
 
     /* Full height */
-    height: 100vh; 
+    height: 80vh; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.parallax_2 > .title{
+    display: flex;
+    font-family: 'VALORANT';
+    color: rgba(235, 232, 225);
+    font-size: 13vw;
+    padding-left: 5vw;
+}
+
+
+
+
+/*masking line*/
+
+.masking-container{
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.masking-line{
+    z-index: 1;
+    width: 80%;
+    height: 100vh;
+    border-left: solid 1px gray;
+}
+
+/*valorant button*/
+
+.play-button {
+    display: flex;
+    height: auto;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-flow: column;
+}
+.play-button a {
+    min-width: 120px;
+    max-width: 240px;
+    height: 54px;
+    padding: 8px;
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: #ff4655;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 0 0 1px inset rgba(236, 232, 225, 0.3);
+    position: relative;
+    margin: 10px 0;
+}
+
+
+.play-button a.white:hover > p {
+    color: #ece8e1;
+}
+.play-button a.white > p {
+    background: #ece8e1;
+    color: #0f1923;
+}
+
+.play-button a.black > p {
+    background: rgb(15, 25, 35);
+    color: #ece8e1;;
+}
+
+
+.play-button a.white > p span.base {
+    border: 1px solid transparent;
+}
+
+.play-button a:after, .play-button a:before {
+    content: "";
+    width: 1px;
+    position: absolute;
+    height: 8px;
+    background: #0f1923;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.play-button a:before {
+    right: 0;
+    left: initial;
+}
+.play-button a p {
+    margin: 0;
+    height: 54px;
+    line-height: 54px;
+    box-sizing: border-box;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.play-button a p span.base {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border: 1px solid rgb(15, 25, 35);
+}
+.play-button a p span.base:before {
+    content: "";
+    width: 2px;
+    height: 2px;
+    left: -1px;
+    top: -1px;
+    background: #0f1923;
+    position: absolute;
+    -webkit-transition: 0.3s ease-out all;
+    transition: 0.3s ease-out all;
+}
+.play-button a p span.bg {
+    left: -5%;
+    position: absolute;
+    background: #ff4655;
+    width: 0;
+    height: 100%;
+    z-index: 3;
+    -webkit-transition: 0.3s ease-out all;
+    transition: 0.3s ease-out all;
+    -webkit-transform: skewX(-10deg);
+            transform: skewX(-10deg);
+}
+.play-button a p span.text {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.play-button a p span.text:after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    right: 0;
+    bottom: 0;
+    background: #0f1923;
+    position: absolute;
+    -webkit-transition: 0.3s ease-out all;
+    transition: 0.3s ease-out all;
+    z-index: 5;
+}
+.play-button a:hover {
+    color: #ece8e1;
+}
+.play-button a:hover span.bg {
+    width: 110%;
+}
+.play-button a:hover span.text:after {
+    background: #ece8e1;
 }
 
 /*large screen*/
@@ -263,8 +678,7 @@ video{
         padding-right: 4rem;
 
     }
-    
-  
+
 
     section{
         margin: 0;
@@ -317,6 +731,7 @@ video{
     .navbar{
         width: 5rem;
         height: 100vh;
+        z-index: 6;
     }
 
     .navbar:hover{
@@ -379,5 +794,89 @@ video{
 
     .parallax{
         height: 50vh; 
+    }
+
+    .content{
+        height: 80vh;
+    }
+
+    .content > .sub-content{
+        flex-direction: column;
+    }
+
+    .sub-content > .left > .title{
+        font-size: 3vw;
+    }
+
+    .sub-content > .left > .description, .sub-content > .left > .footer{
+        font-size: 2.5vw;
+        color: #555555;
+        padding-bottom: 20px;
+    }
+
+    .video-thumbnail > img{
+        width: 100%;
+        height: 40vh;
+    }
+
+    .content::after{
+        border-color: transparent;
+    }
+
+    .sub-content-2 > .left > img{
+        max-width: 40vw;
+    }
+
+    .sub-content-2 > .right{
+        width: 150vw;
+    }
+
+    .sub-content-3 > .left{
+        padding-left: 20px;
+        max-width: 55vw;
+        transform: translateY(5vw);
+    }
+
+    .agent-description > .title, .agent-description > .description{
+        padding-bottom: 2vh;
+    }
+    
+    .agent-description > .title{
+        font-size: 3vw;
+    }
+    
+    .agent-description > .description{
+        font-size: 2.2vw;
+    }
+    
+    .agent-description > .footer{
+        font-size: 2vw;
+    }
+    
+    .content-3{
+        height: 60vw;
+    }
+
+    .sub-content-3 > .left > .title{
+        padding-top: 10px;
+    }
+
+    .sub-content-3 > .left > .description, .sub-content-3 > .left > .footer{
+        font-size: 2vw;
+    }
+    .sub-content-3 > .left > .description{
+        padding: 10px 0;
+    }
+    .sub-content-3 > .left > .footer{
+        padding: 0px 0;
+    }
+
+    .building-thumbnail > img{
+        width: 90vw;
+    }
+
+    .play-button a {
+        min-width: 60px;
+        max-width: 180px;
     }
 }
