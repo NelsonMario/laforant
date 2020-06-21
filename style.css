@@ -5,7 +5,7 @@
             url("asset//VALORANT//Valorant_Font.svg") format("svg");
             font-weight:normal;
             font-style:normal;
-        }
+}
 
 @font-face {font-family:"Muli";
     src: url("asset//Muli//Muli-Italic-VariableFont_wght.ttf") format("truetype");
@@ -20,6 +20,32 @@
     font-style:normal;
 }
 
+@font-face {
+    font-family: "DINNext";
+    src: url("asset/DINNext/654-font.otf") format("opentype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"tungsten";
+    src:url("asset/TungstenFont/@font-face/tungsten.eot") format("eot"),
+    url("asset/TungstenFont/@font-face/tungsten.woff") format("woff"),
+    url("asset/TungstenFont/@font-face/tungsten.ttf") format("truetype"),
+    url("asset/TungstenFont/@font-face/tungsten.woff2") format("woff2");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"tungsten-bold";
+    src:url("asset/TungstenFont/Tungsten-Bold/Tungsten-Bold.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+
 :root{
     font-size: 16px;
     font-family: 'Open Sans';
@@ -31,7 +57,14 @@
     --transition-speed: 650ms;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
 
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     margin: 0;
@@ -275,7 +308,6 @@ video{
 
 .sub-content > .left{
     display: flex;
-    border-left: solid 1px gray;
     flex-direction: column;
     justify-content: center;
     width: 89.9%;
@@ -373,7 +405,6 @@ video{
 }
 
 .agent-description > .title{
-    border-top: solid 1px gray;
     padding-top: 50px;
     font-size: 5vw;
     font-family: 'Valorant';
@@ -514,6 +545,184 @@ video{
     border-left: solid 1px gray;
 }
 
+.content-4{
+    position: relative;
+    overflow: auto;
+    height: 40vw;
+    display: flex;
+    justify-content: flex-end;
+    /* background: url('asset/building_2.png') no-repeat; */
+    font-size:36px;
+    overflow: visible;
+}
+
+
+.content-4::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 70px 29px 40px;
+    border-color: transparent rgb(15, 25, 35, 1) transparent transparent;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.content-4 > .sub-content-4{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+    background: rgb(15, 25, 35, 1) ;
+    overflow: visible;
+}
+
+.sub-content-4 > .middle{
+    display: flex;
+    overflow: visible;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sub-content-4 > .middle > img{
+    width: 30vw;
+    z-index: 1;
+}
+
+.sub-content-4 > .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.twitter, .youtube, .fb, .instagram, .discord{
+    color: white;
+    width: 3vw;
+}
+
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.media-description > .title, .media-description > .description{
+    color: white;
+    padding-bottom: 5vh;
+}
+
+.media-description > .title{
+    color: white;
+    padding-top: 50px;
+    font-size: 6vw;
+    letter-spacing: 2px;
+    font-family: 'tungsten';
+}
+
+.media-description > .description{
+    font-size: 1.8vw;
+    font-weight: bold;
+}
+
+.media-description > .footer{
+    color: white;
+    font-size: 1.5vw;
+}
+
+.media{
+    transition: ease 0.2s;
+}
+
+.media-primary{
+    fill: white;
+}
+
+.media:hover .media-primary{
+    fill: var(--main-red-color);
+}
+
+.middle >img{
+    filter: grayscale(100%);
+    transition: ease-in 0.3s;
+}
+
+.middle >img:hover{
+    filter: grayscale(0);
+}
+
+.parallax_3 {
+    display: flex;
+    align-items: center;
+    /* The image used */
+    background-image: url('asset//tries\ -valorant.png');
+
+    /* Full height */
+    height: 80vh; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax_3 > .title{
+    display: flex;
+    font-family: 'VALORANT';
+    color: rgba(235, 232, 225);
+    font-size: 13vw;
+    padding-left: 5vw;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(17, 17, 17)
+}
+
+.footer-wrapper{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 2.5rem;
+}
+
+.footer-sec{
+    color: white;
+    opacity: 0.7;
+    padding: 20px 0;
+}
+
+.sec-1:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.sec-2:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.sec-4{
+    display: flex;
+}
+
+.sec-4 > .right{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /*valorant button*/
 
 .play-button {
@@ -650,6 +859,9 @@ video{
     background: #ece8e1;
 }
 
+
+
+
 /*large screen*/
 @media only screen and (min-width: 600px){
     .navbar{
@@ -722,9 +934,38 @@ video{
     .homehero{
         height: 40vw;
     }
+
+    .typewriter{
+        display: none;
+        font-size: 1.5vw;
+        letter-spacing: 5px;
+        position: relative;
+        margin: 0 auto;
+        border-right: 2px solid rgba(255,255,255,.75);
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .animation{
+        animation: typewriter 2s steps(20) 1s 1 normal both,
+        blinkTextCursor 500ms steps(20) infinite normal;
+    }
+    
+    @keyframes typewriter{
+        from{width: 0;}
+        to{width: 7em;}
+    }
+    @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+    }
+
+    .media:hover .typewriter{
+        display: flex;
+        color: var(--main-red-color);
+    }
 }
-
-
 
 /*small screen*/
 @media only screen and (max-width: 600px){
@@ -823,11 +1064,11 @@ video{
         border-color: transparent;
     }
 
-    .sub-content-2 > .left > img{
+    .sub-content-2 > .left > img, .sub-content-4 > .middle > img{
         max-width: 40vw;
     }
 
-    .sub-content-2 > .right{
+    .sub-content-2 > .right, .sub-content-4 > .right{
         width: 150vw;
     }
 
@@ -837,11 +1078,11 @@ video{
         transform: translateY(5vw);
     }
 
-    .agent-description > .title, .agent-description > .description{
+    .agent-description > .title, .agent-description > .description,  .media-description > .title, .media-description > .description{
         padding-bottom: 2vh;
     }
     
-    .agent-description > .title{
+    .agent-description > .title, .media-description > .title{
         font-size: 3vw;
     }
     
@@ -849,7 +1090,7 @@ video{
         font-size: 2.2vw;
     }
     
-    .agent-description > .footer{
+    .agent-description > .footer, .media-description > .footer{
         font-size: 2vw;
     }
     
@@ -878,5 +1119,9 @@ video{
     .play-button a {
         min-width: 60px;
         max-width: 180px;
+    }
+
+    .typewriter{
+        display: none;
     }
 }
