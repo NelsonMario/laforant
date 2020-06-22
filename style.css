@@ -72,6 +72,7 @@ body{
     color: black;
     background-color: white;
     font-family: 'DINNext';
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -444,6 +445,7 @@ video{
 
 .sub-content-3 > .left{
     display: flex;
+    padding-left: 10px;
     border-left: solid 1px gray;
     flex-direction: column;
     align-items: flex-start;
@@ -723,6 +725,12 @@ footer{
     box-sizing: border-box;
 }
 
+.sec-4 > .right{
+    margin-left: 5px;
+}
+
+
+
 /*valorant button*/
 
 .play-button {
@@ -752,10 +760,14 @@ footer{
     margin: 10px 0;
 }
 
-
 .play-button a.white:hover > p {
     color: #ece8e1;
 }
+
+.play-button a.blackhover:hover > p {
+    color: #ff4655;
+}
+
 .play-button a.white > p {
     background: #ece8e1;
     color: #0f1923;
@@ -782,6 +794,7 @@ footer{
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
 }
+
 .play-button a:before {
     right: 0;
     left: initial;
@@ -817,6 +830,7 @@ footer{
     -webkit-transition: 0.3s ease-out all;
     transition: 0.3s ease-out all;
 }
+
 .play-button a p span.bg {
     left: -5%;
     position: absolute;
@@ -829,6 +843,15 @@ footer{
     -webkit-transform: skewX(-10deg);
             transform: skewX(-10deg);
 }
+
+.play-button a.blackhover > p span.bg {
+    background: #0f1923;
+}
+
+.play-button a.blackhover:hover > p span.bg {
+    background: #0f1923;
+}
+
 .play-button a p span.text {
     z-index: 4;
     width: 100%;
